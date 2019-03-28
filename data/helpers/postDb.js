@@ -18,6 +18,7 @@ function getById(id) {
     .first();
 }
 
+
 function insert(post) {
   return db('posts')
     .insert(post)
