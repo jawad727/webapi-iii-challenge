@@ -32,7 +32,7 @@ Follow these steps for completing your project.
 1. Use `Express Routers` to organize the endpoints. You can optionally move and rename `postDb.js` and `userDb.js` to place it next to the corresponding router.
 
 ### Database Persistence Helpers
-
+ 
 The `/data/helpers` folder includes helper files that you can use to manage the persistence of _users_ and _posts_ data. These files are `userDb.js` and `postDb.js`. Both files publish the following api:
 
 - `get()`: calling find returns a promise that resolves to an array of all the `resources` contained in the database.

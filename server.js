@@ -1,12 +1,15 @@
 const express = require('express');
 const userRouter = require('./Routers/user-router');
-const postRouter = require('./Routers/post-router');
-const server = express();
+const postRouter = require('./Routers/post-router');const server = express();
+
+//custom middleware
+function toCap(req, res, next) {
+    req.body.name = req.body.name.toUpperCase();
+    next();
+}
 
 //middleware
 server.use(express.json());
-
-
 
 
 
@@ -18,8 +21,8 @@ server.get('/', (req, res) => {
 });
 
 //Routes
-server.use('/api/posts', postRouter)
-server.use('/api/users', userRouter)
+server.use('/api/posts' ,postRouter)
+server.use('/api/users' ,userRouter)
 
 
 module.exports = server
